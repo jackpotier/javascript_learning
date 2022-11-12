@@ -1,18 +1,19 @@
-// program to find the sum of natural numbers using recursion
+let userName = prompt("Who's there?", '');
 
-function sum(num) {
-    if(num > 0) {
-        return num + sum(num - 1);
-    }
-    else {
-        return num;
-    }
- }
+if (userName === 'Admin') {
 
-// take input from the user
-const number = parseInt(prompt('Enter a positive integer: '));
+  let pass = prompt('Password?', '');
 
-const result = sum(number);
+  if (pass === 'TheMaster') {
+    alert( 'Welcome!' );
+  } else if (pass === '' || pass === null) {
+    alert( 'Canceled' );
+  } else {
+    alert( 'Wrong password' );
+  }
 
-// display the result
-console.log(`The sum is ${result}`);
+} else if (userName === '' || userName === null) {
+  alert( 'Canceled' );
+} else {
+  alert( "I don't know you" );
+}
