@@ -1,19 +1,22 @@
 let userName = prompt("Who's there?", '');
+function authenticator(){
+    if (userName === 'Admin') {
 
-if (userName === 'Admin') {
+    let pass = prompt('Password?', '');
 
-  let pass = prompt('Password?', '');
+    if (pass === 'TheMaster') {
+        alert( 'Welcome!' );
+    } else if (pass === '' || pass === null) {
+        alert( 'Canceled' );
+    } else {
+        alert( 'Wrong password' );
+    }
 
-  if (pass === 'TheMaster') {
-    alert( 'Welcome!' );
-  } else if (pass === '' || pass === null) {
+    } else if (userName === '' || userName === null) {
     alert( 'Canceled' );
-  } else {
-    alert( 'Wrong password' );
-  }
-
-} else if (userName === '' || userName === null) {
-  alert( 'Canceled' );
-} else {
-  alert( "I don't know you" );
+    } else {
+    alert( "I don't know you" );
+    }
 }
+
+authenticator() 
